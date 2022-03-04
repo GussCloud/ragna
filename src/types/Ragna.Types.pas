@@ -3,7 +3,7 @@ unit Ragna.Types;
 interface
 
 type
-  TOperatorType = (otWhere, otOr, otLike, otEquals, otOrder, otAnd);
+  TOperatorType = (otWhere, otOr, otLike, otEquals, otOrder, otAnd, otLess);
 
   TOperatorTypeHelper = record helper for TOperatorType
   public
@@ -27,6 +27,8 @@ begin
       Result := 'ORDER BY';
     otAnd:
       Result := 'AND';
+    otLess:
+      Result := '<';
   end;
 end;
 
