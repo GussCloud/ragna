@@ -1,5 +1,6 @@
 unit Ragna.Criteria.Impl;
-
+
+
 interface
 
 uses FireDAC.Comp.Client, StrUtils, Data.DB, FireDAC.Stan.Param, System.Hash, Ragna.Criteria.Intf, Ragna.Types;
@@ -91,7 +92,7 @@ end;
 
 procedure TDefaultCriteria.Like(const AValue: string);
 const
-  PHRASE = '::text %s %s';
+  PHRASE = '%s %s';
 var
   LKeyParam: string;
   LParam: TFDParam;
@@ -162,4 +163,4 @@ begin
 end;
 
 end.
-
+
